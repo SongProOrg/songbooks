@@ -1,0 +1,11 @@
+<h1>New Song</h1>
+<%= form_with model: @song do |form| %>
+<%= form.label :title %>
+  <%= form.text_field :title %>
+  <%= form.label :artist %>
+  <%= form.text_field :artist %>
+  <%= form.label :body %>
+  <%= form.text_area :body, size: "60x10" %>
+  <%= form.submit %>
+<% end %>
+
