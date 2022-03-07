@@ -1,4 +1,4 @@
-# Problem
+# Story
 
 Problem statement, including motivation
 
