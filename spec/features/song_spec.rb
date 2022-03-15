@@ -12,4 +12,13 @@ RSpec.feature "Songs", type: :feature do
     expect(page).to have_selector('h2', text: 'David Bowie')
     expect(page).to have_content('[C] Ground Control to Major [Em]Tom')
   end
+
+  scenario "Add a song without required fields" do
+    visit "/"
+    click_on 'Add a Song'
+    click_on 'Create Song'
+    expect(page).to have_content("Title can't be blank")
+    expect(page).to have_content("Artist can't be blank")
+    expect(page).to have_content("Body can't be blank")
+  end
 end
